@@ -25,3 +25,4 @@ def two_sum(arr, target):
 if __name__ == '__main__':
     print(two_sum([1,3,4,6,8,10,13], 13))
     print(two_sum([1,3,4,6,8,10,13], 6))
+    print(two_sum([2,3,4], 6))
