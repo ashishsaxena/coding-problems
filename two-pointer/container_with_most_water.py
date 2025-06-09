@@ -11,22 +11,19 @@ Output: 2
 '''
 
 
-def max_container(arr):
-    i = 0
-    j = len(arr) - 1
-    max_vol = -1
-    while i<j:
-        width = j-i
-        if arr[i] > arr[j]:
-            vol = width * arr [j]
-            max_vol = max_vol if max_vol > vol else vol
-            j -= 1
+def max_container(heights):
+    left, right = 0, len(heights) - 1
+    max_area = 0
+    while left < right:
+        width = right - left
+        height = min(heights[left], heights[right])
+        current_area = width * height
+        max_area = max(current_area, max_area)
+        if heights[left] > heights[right]:
+            right -= 1
         else:
-            vol = width * arr [i]
-            max_vol = max_vol if max_vol > vol else vol
-            i += 1
-    print(f'{arr} -> {max_vol}')
-    return max_vol
+            left += 1
+    return max_area
 
 
 
