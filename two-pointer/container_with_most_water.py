@@ -28,6 +28,6 @@ def max_container(heights):
 
 
 if __name__ == '__main__':
-    max_container([3,4,1,2,2,4,1,3,2])
-    max_container([1,2,1])
-    max_container([1,8,6,2,5,4,8,3,7])
+    print(max_container([3,4,1,2,2,4,1,3,2]))
+    print(max_container([1,2,1]))
+    print(max_container([1,8,6,2,5,4,8,3,7]))
